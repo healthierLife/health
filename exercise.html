@@ -1,0 +1,530 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="stylesheet" href="style_sheet.css">
+
+        <title>Exercise</title>
+        <style>
+
+            body {background-color:snow;}
+            
+            h1 {text-align: center; 
+            font-size: 100px; color: rgb(127, 0, 0);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;}
+
+            h3 {font-family: 'Times New Roman', Times, serif; color: rgb(95, 12, 12);}
+            
+            .ul {list-style-type: circle; font-family: Arial, sans-serif;}
+            
+            h5.edit {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: teal;}
+            
+            h4#ed {font-family: 'Times New Roman', Times, serif; color: darkblue; background-color: thistle;
+                border: 1px solid darkblue; margin: 30;}
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>  
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    
+                <div class="container-fluid font1">
+    
+                    <a class="navbar-brand" href="index.html">
+                        <img src="withoutBg.png" alt="Logo" id="logo" class="d-inline-block align-text-top">
+                        <span>Atlas of Wellness</span>
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse justify-content-end " id="navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Food.html">Nutrition</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Mental Health.html">Mental Health</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="exercise.html">Exercise</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="appointments.html">Appointments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="about us.html">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Calculation.html">Calculation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="funpage.html">Funpage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            </header>
+
+        <br>
+        <div class="container">
+            <h1> Exercise </h1> </br> 
+            <hr>
+            <img src="Equipment.jpg" width="500"  style="float: left; padding: 30px;">
+        </br> </br> </br> </br> </br> 
+            <h4 id="ed"> - Benefits of regular physical activities  </h3>
+            <h4 id="ed"> - Good exercises to do every day</h3>
+            <p style="font-size: medium;"> Want to feel better and have more energy? and even add years to your life? </br>
+            you just need to exercise!! </p> </br> </br> </br> </br> 
+            </div>
+
+            <div class="container">
+                <h3> Here are some Benefits of regular physical activities: </h3>
+            <ol style="font-family: Arial, sans-serif;"">
+              <li> Exercise controls weight </li>
+              <li> Exercise combats health conditions and diseases </li>
+              <li> Exercise improve brain function and protect the memory </li>
+              <li> Exercise strengthens muscles and bones </li>
+              <li> Exercise improves mood </li>
+              <li> Exercise promotes relaxation and better sleep  </li>
+              <li> Exercise boosts energy </li>
+            </ol>
+            <hr>
+            <hr>
+        </br>
+            <h3> Here are some physical activities: </h3>
+        </br>
+            <img src="beginner.jpg" alt="picture 1" class="img-thumbnail" width="350" height="350">
+        </br> </br>
+            <h5 class="edit"> Beginner Routine: </br>
+            Duration: 30-45 minutes </h5>
+        </br>
+
+        <form id="searchForm">
+            <input type="text" id="searchInfo" placeholder="Enter exercise information">
+            <button type="submit">Search</button>
+        </form>
+        <div id="searchResult"></div>
+
+        <br/>
+            <table class="table table-hover" style="width:900px;">
+                <thead>
+                <tr>
+                <th>Type Of Exercise</th>
+                <th>Time Taken</th>
+                <th>What to do?</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+                </table>
+
+            <script>
+                // Define a constructor function 'tbl' to create exercise objects
+                function tbl(type, time, tasks) {
+                this.typeOfExercise = type;
+                this.timeTaken = time;
+                this.tasks = tasks;          
+}
+                // Define an array of exercise objects
+                const array = [new tbl("Warm-Up", "5-10 minutes", 
+                "<ul class='ul'> <li> 5 minutes of brisk walking or light jogging </li><li> Dynamic stretches: arm circles, leg swings, torso twists </li></ul>"),
+                               new tbl("Strength Training", "20-25 minutes",
+                "<ul class='ul'><li>weight squats: 3 sets of 10-12 reps</li><li>Push-ups (can be modified): 3 sets of 8-10 reps</li><li>Body weight lunges: 3 sets of 10 reps each leg</li><li>Plank: 3 sets, hold for 20-30 seconds each</li><li>Dumbbell rows (if available): 3 sets of 8-10 reps</li></ul> "),
+                               new tbl("Cardio", "10-15 minutes5",
+                "<ul class='ul'><li>Alternating between jogging and walking for 10-15 minutes</li><li>Option: Jumping jacks, high knees, or cycling if available</li> </ul>"),
+                               new tbl("Cool Down", "5-10 minutes",
+                "<ul class='ul'><li>Stretching: focusing on major muscle groups, holding each stretch for 15-30 seconds</li></ul>"),
+                ];
+
+                // Function to create and populate the table with exercise information
+                function createTable() {
+                var tableBody = document.getElementById('tableBody');
+                var tableContent = '';
+
+                for (var i = 0; i < array.length; i++) {
+                var exercise = array[i];
+                tableContent += '<tr><td>' + exercise.typeOfExercise + '</td><td>' + exercise.timeTaken + '</td><td>' + exercise.tasks + '</td></tr>';
+    }
+
+            // Set the inner HTML of the table body to the constructed table content
+            tableBody.innerHTML = tableContent;
+}
+        // Call the function to create the table
+        createTable();
+
+        function search(event) {
+            event.preventDefault();
+            const searchInfo = document.getElementById('searchInfo').value.toLowerCase();
+            const result = array.filter(item => 
+                item.typeOfExercise.toLowerCase().includes(searchInfo) ||
+                item.timeTaken.toLowerCase().includes(searchInfo) ||
+                item.tasks.toLowerCase().includes(searchInfo)
+            );
+            displayResult(result);
+        }
+
+        // Function to display search result
+        function displayResult(result) {
+            const searchResult = document.getElementById('searchResult');
+            searchResult.innerHTML = ''; // Clear previous results
+            if (result.length === 0) {
+                searchResult.innerHTML = 'No result, try again!';
+            } else {
+                result.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.textContent = `${item.typeOfExercise} - duration: ${item.timeTaken} - tasks: ${item.tasks}`;
+                    searchResult.appendChild(itemDiv);
+                });
+            }
+        }
+
+        // Attaching event listener to the form
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('searchForm');
+            form.addEventListener('submit', search);
+        });
+            </script>
+            <br/>
+
+                <img src="intermediate.jpg" alt="picture 2" class="img-thumbnail" width="350" height="350">
+            </br>
+        </br>
+                <h5 class="edit"> Intermediate Routine: </br>
+                Duration: 45-60 minutes </h5>
+            </br>
+
+            <form id="searchForm2">
+                <input type="text" id="searchInfo2" placeholder="Enter exercise information">
+                <button type="submit">Search</button>
+            </form>
+            <div id="searchResult2"></div>
+            <br/>
+
+            <table class="table table-hover" style="width:900px;">
+                <thead>
+                <tr>
+                <th>Type Of Exercise</th>
+                <th>Time Taken</th>
+                <th>What to do?</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody2">
+
+                </tbody>
+                </table>
+
+            <script>
+                // Define a constructor function 'tbl2' to create exercise objects
+                function tbl2(type, time, tasks) {
+                this.typeOfExercise = type;
+                this.timeTaken = time;
+                this.tasks = tasks;          
+}
+                // Define an array of exercise objects
+                const array2 = [new tbl2("Warm-Up", "10 minutes", 
+                "<ul class='ul'> <li> 5 minutes of light jogging or cycling </li><li> Dynamic stretches: leg swings, arm circles, hip circles </li></ul>"),
+                               new tbl2("Strength Training", "25-30 minutes",
+                "<ul class='ul'><li>Goblet squats: 3 sets of 10-12 reps </li><li>Push-ups (regular or incline): 3 sets of 10-12 reps</li><li>Dumbbell lunges: 3 sets of 10 reps each leg</li><li>Dumbbell chest press: 3 sets of 10-12 reps</li><li>Bent-over dumbbell rows: 3 sets of 10-12 reps</li></ul>"),
+                               new tbl2("Cardio", "15-20 minutes",
+                "<ul class='ul'><li>Interval training: alternate between high-intensity bursts (e.g., sprinting) and lower-intensity periods (e.g., jogging or brisk walking) for 15-20 minutes</li> </ul>"),
+                               new tbl2("Cool Down", "10 minutes",
+                "<ul class='ul'><li>Stretching: focusing on all major muscle groups, holding each stretch for 20-30 seconds</li></ul>"),
+                ];
+
+                // Function to create and populate the table with exercise information
+                function createTable2() {
+                var tableBody2 = document.getElementById('tableBody2');
+                var tableContent2 = '';
+
+                for (var i = 0; i < array2.length; i++) {
+                var exercise2 = array2[i];
+                tableContent2 += '<tr><td>' + exercise2.typeOfExercise + '</td><td>' + exercise2.timeTaken + '</td><td>' + exercise2.tasks + '</td></tr>';
+    }
+
+            // Set the inner HTML of the table body to the constructed table content
+            tableBody2.innerHTML = tableContent2;
+}
+        // Call the function to create the table
+        createTable2();
+
+        // Function to search data array
+        function search2(event2) {
+            event2.preventDefault();
+            const searchInfo2 = document.getElementById('searchInfo2').value.toLowerCase();
+            const result2 = array2.filter(item => 
+                item.typeOfExercise.toLowerCase().includes(searchInfo2) ||
+                item.timeTaken.toLowerCase().includes(searchInfo2) ||
+                item.tasks.toLowerCase().includes(searchInfo2)
+            );
+            displayResult2(result2);
+        }
+
+        // Function to display search result
+        function displayResult2(result2) {
+            const searchResult2 = document.getElementById('searchResult2');
+            searchResult2.innerHTML = ''; // Clear previous results
+            if (result2.length === 0) {
+                searchResult2.innerHTML = 'No result, try again!';
+            } else {
+                result2.forEach(item => {
+                    const itemDiv2 = document.createElement('div');
+                    itemDiv2.textContent = `${item.typeOfExercise} - duration: ${item.timeTaken} - tasks: ${item.tasks}`;
+                    searchResult2.appendChild(itemDiv2);
+                });
+            }
+        }
+
+        // Attaching event listener to the form
+        document.addEventListener('DOMContentLoaded', function() {
+            const form2 = document.getElementById('searchForm2');
+            form2.addEventListener('submit', search2);
+        });
+
+            </script>
+            <br/>
+
+                <img src="advanced.jpg" alt="picture 3" class="img-thumbnail" width="350" height="350"> </br> </br>
+                <h5 class="edit"> Advanced Routine:</br>
+                Duration: 60-75 minutes </h5>
+            </br>
+            <form id="searchForm3">
+                <input type="text" id="searchInfo3" placeholder="Enter exercise information">
+                <button type="submit">Search</button>
+            </form>
+            <div id="searchResult3"></div>
+            <br/>
+
+            <table class="table table-hover" style="width:900px;">
+                <thead>
+                <tr>
+                <th>Type Of Exercise</th>
+                <th>Time Taken</th>
+                <th>What to do?</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody3">
+
+                </tbody>
+                </table>
+
+            <script>
+                // Define a constructor function 'tbl3' to create exercise objects
+                function tbl3(type, time, tasks) {
+                this.typeOfExercise = type;
+                this.timeTaken = time;
+                this.tasks = tasks;          
+}
+                // Define an array of exercise objects
+                const array3 = [new tbl3("Warm-Up", "5-10 minutes", 
+                "<ul class='ul'> <li> 5-10 minutes of light cardio (jogging, cycling, or jump rope) </li><li> Dynamic stretching: leg swings, arm circles, hip circles, torso twists </li></ul> "),
+                               new tbl3("Strength Training", "30-40 minutes",
+                "<ul class='ul'><li>Barbell squats: 4 sets of 8-10 reps</li><li>Deadlifts: 4 sets of 8-10 reps</li><li>Bench press: 4 sets of 8-10 reps</li><li>Pull-ups or chin-ups: 4 sets to failure</li><li>Barbell rows: 4 sets of 8-10 reps </li></ul>"),
+                               new tbl3("Cardio", "20-30 minutes",
+                "<ul class='ul'><li>High-intensity interval training (HIIT) incorporating various exercises such as sprints, burpees, mountain climbers, and kettlebell swings for 20-30 minutes</li> </ul>"),
+                               new tbl3("Cool Down", "10-15 minutes",
+                "<ul class='ul'><li>Static stretching: focusing on all major muscle groups, holding each stretch for 30-45 seconds</li><li>Foam rolling or self-myofascial release</li></ul>"),
+                ];
+
+                // Function to create and populate the table with exercise information
+                function createTable3() {
+                var tableBody3 = document.getElementById('tableBody3');
+                var tableContent3 = '';
+
+                for (var i = 0; i < array3.length; i++) {
+                var exercise3 = array3[i];
+                tableContent3 += '<tr><td>' + exercise3.typeOfExercise + '</td><td>' + exercise3.timeTaken + '</td><td>' + exercise3.tasks + '</td></tr>';
+    }
+
+            // Set the inner HTML of the table body to the constructed table content
+            tableBody3.innerHTML = tableContent3;
+}
+        // Call the function to create the table
+        createTable3();
+
+        // Function to search data array
+        function search3(event3) {
+            event3.preventDefault();
+            const searchInfo3 = document.getElementById('searchInfo3').value.toLowerCase();
+            const result3 = array3.filter(item => 
+                item.typeOfExercise.toLowerCase().includes(searchInfo3) ||
+                item.timeTaken.toLowerCase().includes(searchInfo3) ||
+                item.tasks.toLowerCase().includes(searchInfo3)
+            );
+            displayResult3(result3);
+        }
+
+        // Function to display search result
+        function displayResult3(result3) {
+            const searchResult3 = document.getElementById('searchResult3');
+            searchResult3.innerHTML = ''; // Clear previous results
+            if (result3.length === 0) {
+                searchResult3.innerHTML = 'No result, try again!';
+            } else {
+                result3.forEach(item => {
+                    const itemDiv3 = document.createElement('div');
+                    itemDiv3.textContent = `${item.typeOfExercise} 
+                    duration: ${item.timeTaken} 
+                    tasks: ${item.tasks}`;
+                    searchResult3.appendChild(itemDiv3);
+                });
+            }
+        }
+
+        // Attaching event listener to the form
+        document.addEventListener('DOMContentLoaded', function() {
+            const form3 = document.getElementById('searchForm3');
+            form3.addEventListener('submit', search3);
+        });
+
+            </script>
+            <br/>
+                <img src="expert.jpg" alt="picture 4" class="img-thumbnail" width="350" height="350"> </br> </br>
+                <h5 class="edit"> Expert Routine:</br>
+                Duration: 75-90 minutes  </h5>
+            </br>
+
+            <form id="searchForm4">
+                <input type="text" id="searchInfo4" placeholder="Enter exercise information">
+                <button type="submit">Search</button>
+            </form>
+            <div id="searchResult4"></div>
+            <br/>
+
+            <table class="table table-hover" style="width:900px;">
+                <thead>
+                <tr>
+                <th>Type Of Exercise</th>
+                <th>Time Taken</th>
+                <th>What to do?</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody4">
+
+                </tbody>
+                </table>
+
+            <script>
+                // Define a constructor function 'tbl4' to create exercise objects
+                function tbl4(type, time, tasks) {
+                this.typeOfExercise = type;
+                this.timeTaken = time;
+                this.tasks = tasks;          
+}
+                // Define an array of exercise objects
+                const array4 = [new tbl4("Warm-Up", "12 minutes", 
+                "<ul class='ul'><li> Full-body dynamic warm-up including movements such as jumping lunges,inchworms, lateral shuffles, and arm circles for 12 minutes. </li></ul>"),
+                               new tbl4("Strength Training", "40-45 minutes",
+                "<ul class='ul'><li>Squat variations (back squats, front squats, overhead squats): 5 sets of 5 reps each.</li><li>Deadlift variations (conventional deadlifts, sumo deadlifts, deficit deadlifts): 5 sets of 5 reps each.</li><li>Weighted pull-ups or muscle-ups: 5 sets of 5 reps.</li><li>Barbell or dumbbell bench press: 5 sets of 5 reps.</li><li>Turkish get-ups: 3 sets of 3 reps per side.</li> </ul>"),
+                               new tbl4("Cardio", "25-30 minutes",
+                "<ul class='ul'><li>Tabata training: 8 rounds of 20 seconds of maximum effort followed by 10 seconds of rest for exercises like sprinting,rowing, or cycling for 25-30 minutes.</li> </ul>"),
+                               new tbl4("Cool Down", "12 minutes",
+                "<ul class='ul'><li>Comprehensive static stretching routine targeting all major muscle groups,holding each stretch for 45-60 seconds.</li><li>Using foam roller, lacrosse ball, or massage gun for myofascial release.</li><li> Mindful breathing exercises or guided meditation to enhance recovery and relaxation.</li></ul>"),
+                ];
+
+                // Function to create and populate the table with exercise information
+                function createTable4() {
+                var tableBody4 = document.getElementById('tableBody4');
+                var tableContent4 = '';
+
+                for (var i = 0; i < array4.length; i++) {
+                var exercise4 = array4[i];
+                tableContent4 += '<tr><td>' + exercise4.typeOfExercise + '</td><td>' + exercise4.timeTaken + '</td><td>' + exercise4.tasks + '</td></tr>';
+    }
+
+            // Set the inner HTML of the table body to the constructed table content
+            tableBody4.innerHTML = tableContent4;
+}
+        // Call the function to create the table
+        createTable4();
+        
+        // Function to search data array
+        function search4(event4) {
+            event4.preventDefault();
+            const searchInfo4 = document.getElementById('searchInfo4').value.toLowerCase();
+            const result4 = array4.filter(item => 
+                item.typeOfExercise.toLowerCase().includes(searchInfo4) ||
+                item.timeTaken.toLowerCase().includes(searchInfo4) ||
+                item.tasks.toLowerCase().includes(searchInfo4)
+            );
+            displayResult4(result4);
+        }
+
+        // Function to display search result
+        function displayResult4(result4) {
+            const searchResult4 = document.getElementById('searchResult4');
+            searchResult4.innerHTML = ''; // Clear previous results
+            if (result4.length === 0) {
+                searchResult4.innerHTML = 'No result, try again!';
+            } else {
+                result4.forEach(item => {
+                    const itemDiv4 = document.createElement('div');
+                    itemDiv4.textContent = `${item.typeOfExercise} 
+                    duration: ${item.timeTaken} 
+                    tasks: ${item.tasks}`;
+                    searchResult4.appendChild(itemDiv4);
+                });
+            }
+        }
+
+        // Attaching event listener to the form
+        document.addEventListener('DOMContentLoaded', function() {
+            const form4 = document.getElementById('searchForm4');
+            form4.addEventListener('submit', search4);
+        });
+            </script>
+            <br/>
+                        
+            </div>
+
+            <footer class="footer">
+
+                <div class="container">
+        
+                    <div class="row">
+                    
+                        <div class="col-md-4">
+                            <h4>Atlas of Wellness</h4>
+                            <p class="bg-gray">Your Guide to Optimal Health and Well-Being</p>
+                        </div>
+        
+                        <div class="col-md-4">
+                            <h4>Visit our accounts</h4>
+        
+                            <div class="row">
+                                
+                                    <div class="col-md-1"><a href="https://www.instagram.com/atlas.of.wellness?igsh=MXE1aTU2YjVydDRmZQ%3D%3D&utm_source=qr"><img src="instagram.png" alt="instagram-account" class="link" ></a></div>
+                                    
+                                    <div class="col-md-1"><a href="https://x.com/atlas4wellness1?s=11&t=5HIUu_K_Gy2fLhE3-DT_ow"><img src="twitter.png" alt="twitter-account" class="link" ></a></div>
+                                    
+                                    <div class="col-md-1"><a href="https://www.facebook.com/profile.php?id=61557521196539"><img src="facebook.png" alt="facebook-account" class="link"></a></div>
+    
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <h4>Reach Our Support Team</h4>
+                            <p> <a href="mailto:Atlas4wellness@gmail.com">Atlas4wellness@gmail.com</a></p>
+                        </div>
+                
+                </div>
+        
+            </footer>
+
+    </body>
+</html>
