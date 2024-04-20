@@ -1,0 +1,268 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" href="style_sheet.css">
+
+        <title>Index</title>
+
+        <style>
+
+            body {background-color: rgb(255, 255, 255);}
+            p1 {color:rgb(18, 58, 49); font-size: 25px; font-weight: 400;}
+            h2 {font-size: 25px; text-align: center;}
+            
+            /* Generic class to apply for all phrases */
+            .frame {background-color: rgba(145, 187, 179, 0.434); border: solid 2px; border-color: black ; 
+                    padding: 30px; margin: 25px;}
+
+            *{font-style: italic;}
+            .name {font-size: 32px; color:rgb(18, 59, 51); font-weight: 500;}
+
+            .slideShow-container {
+                max-width: 1000px;
+                position: relative;
+                margin-bottom: auto;
+            }
+            
+            .mySlide {
+                display: none;
+                vertical-align: middle;}
+
+            /* Fading animation */
+            .fade {
+                animation-name: fade;
+                animation-duration: 3s;}
+
+            @keyframes fade {
+                from {opacity: .8} 
+                to {opacity: 1}
+            }
+
+            .banner_container {
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgb(0, 0, 0);
+                color:rgb(172, 232, 223);
+                padding: 10px;
+                text-align: center;
+                font-size: 23px;
+                font-weight: 200;
+                letter-spacing: 2;
+                overflow: hidden; /* Hide overflowing text */
+                white-space: nowrap; /* To ensure the text is in one line */
+            }
+
+            .span {
+                font-size: 30px;
+                color: rgb(208, 254, 192);
+            }
+            
+            /* Text banner animation */
+            .welcom {
+                animation-name: moveText;
+                animation-duration: 40s;
+                animation-iteration-count: infinite;
+                animation-timing-function: steps(2000, end); /* Divide the animation into steps to make it move as a wheel*/
+            }
+
+            @keyframes moveText {
+                0% {
+                    transform: translateX(100%); /* Start from right */
+                }
+                100% {
+                    transform: translateX(-100%); /* Move to left */
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>  
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    
+                <div class="container-fluid font1">
+    
+                    <a class="navbar-brand" href="index.html">
+                        <img src="withoutBg.png" alt="Logo" id="logo" class="d-inline-block align-text-top">
+                        <span>Atlas of Wellness</span>
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse justify-content-end " id="navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link " href="Food.html">Nutrition</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Mental Health.html">Mental Health</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="exercise.html">Exercise</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="appointments.html">Appointments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about us.html">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Calculation.html">Calculation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="funpage.html">Funpage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            </header>
+
+        <br>
+        <div class="row" class="slideShow-container">
+
+            <div class="mySlide fade">
+                <img src="index1.png" style="width: 100%">
+            </div>
+
+            <div class="mySlide fade">
+                <img src="index2.jpg" style="width: 100%">
+            </div>
+
+            <div class="mySlide fade">
+                <img src="index4.jpg" style="width: 100%">
+            </div>
+
+        </div>
+
+        <br><br><br>
+
+        <div class="container">
+            <p1>Welcome to the <span class="name">Atlas Of Wellness</span>, your ultimate resource for holistic wellness. 
+                Dive into our curated articles, guides, and expert insights to enrich your journey towards better health. 
+                Join our vibrant community, empowering you with the knowledge to lead a happier, healthier life. Welcome aboard, 
+                let's thrive together! Explore, engage, evolve.  <br><a class="float-end" style="color: rgb(23, 168, 168);" 
+                href="appointments.html" class="btn btn-dark">Subscribe Now ></a></p1>
+        </div>
+        <br><br><hr/>
+        <br><br>
+
+        <div class="row">
+
+            <div class="col">
+                <h2 class="frame">Transform your meals into moments of wellness with our healthy food options
+                    <br><br>
+                    <a href="Food.html"
+                     class="btn btn-dark">Nutrition</a>
+                </h2></div>
+
+            <div class="col">
+                <h2 class="frame">Discover effective workouts and find your fitness inspiration here
+                    <br><br>
+                    <a href="exercise.html"
+                     class="btn btn-dark">Exercises</a>
+                </h2></div>
+        </div>
+        <br><br>
+
+        <div class="row">
+
+            <div class="col">
+                <h2 class="frame">Learn about the team behind our health initiative
+                    <br><br>
+                    <a href="about us.html"
+                     class="btn btn-dark">About Us</a>
+                </h2></div>
+
+            <div class="col">
+                <h2 class="frame">Don't hesitate to reach out we are here to help!
+                    <br><br>
+                    <a href="contact.html"
+                     class="btn btn-dark">Contact Us</a>
+                </h2></div>
+        </div>
+
+        <footer class="footer">
+
+            <div class="container">
+    
+                <div class="row">
+                
+                    <div class="col-md-4">
+                        <h4>Atlas of Wellness</h4>
+                        <p class="bg-gray">Your Guide To Optimal Health And Well-Being</p>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <h4>Visit our accounts</h4>
+    
+                        <div class="row">
+                            
+                                <div class="col-md-1"><a href="https://www.instagram.com/atlas.of.wellness?igsh=MXE1aTU2YjVydDRmZQ%3D%3D&utm_source=qr"><img src="instagram.png" alt="instagram-account" class="link" ></a></div>
+                                
+                                <div class="col-md-1"><a href="https://x.com/atlas4wellness1?s=11&t=5HIUu_K_Gy2fLhE3-DT_ow"><img src="twitter.png" alt="twitter-account" class="link" ></a></div>
+                                
+                                <div class="col-md-1"><a href="https://www.facebook.com/profile.php?id=61557521196539"><img src="facebook.png" alt="facebook-account" class="link"></a></div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h4>Reach Our Support Team</h4>
+                        <p> <a href="mailto:Atlas4wellness@gmail.com">Atlas4wellness@gmail.com</a></p>
+                    </div>
+            
+                </div>
+            </div>
+            <hr/>
+
+            <div class="banner_container">
+                <div class="welcom">Welcom to <span class="span">Atlass Of Wellness</span> 
+                    Your Guide To Optimal Health And Well-Being, Today is 
+                    <span id = "date" class="span"></span>, And The Time Is 
+                    <span id = "time" class="span"></span></div>
+            </div>
+    
+        </footer>
+
+        <script>
+            
+            function updateTime() {
+                // creat new date and time objects.
+                const currentDate = new Date("20 April 2024");
+                
+                // Get the date and time portion of the current date object and convert it to a localized string.
+                const date = currentDate.toLocaleDateString();
+                const time = currentDate.toLocaleTimeString();
+
+                // Update the content of the date and time to display the current date.
+                document.getElementById("date").textContent = date;
+                document.getElementById("time").textContent = time;
+            }
+            // Run the updateTime function when the window finishes loading and then call it.
+            window.onload = function() {
+                updateTime();
+                setInterval(updateTime, 1000); // Update time every second
+            }
+        </script>
+
+        <script src="SlideShow.js"></script>
+      
+    </body>
+</html>
