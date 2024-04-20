@@ -1,0 +1,260 @@
+<html>
+    <head>
+        <title>
+            Subscriptions And Appointments
+        </title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" href="style_sheet.css">
+
+    </head>
+    <body>
+
+        <header>  
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    
+                <div class="container-fluid font1">
+    
+                    <a class="navbar-brand" href="index.html">
+                        <img src="withoutBg.png" alt="Logo" id="logo" class="d-inline-block align-text-top">
+                        <span>Atlas of Wellness</span>
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse justify-content-end " id="navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Food.html">Nutrition</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Mental Health.html">Mental Health</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="exercise.html">Exercise</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="appointments.html">Appointments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about us.html">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Calculation.html">Calculation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="funpage.html">Funpage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            </header>
+
+        <h1 style = 
+        "padding-top: 25px;
+        text-align: center; 
+        font-size: 100px; color: rgb(127, 0, 0);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">Subscriptions</h1>
+        <hr/>
+        <p style = "font-family: Arial, sans-serif;
+        padding: 20px; color: rgb(78, 78, 78); background-color: rgb(243, 243, 243);">
+        Join our vibrant health community today, where you can stay informed, inspired, and empowered
+        to take control of your well-being by subscribing now! Gain exclusive access to expert tips, valuable resources, and the latest updates on your health journey. </p>
+
+        <table style="width: 100%; border-collapse: collapse; ">
+            <tr>
+                <td style="padding: 10px; text-align: center;"><img src="pic1.jpeg" alt="Image 1" style="width: 250px; height: 250px;"></td>
+                <td style="padding: 10px; text-align: center;"><img src="pic2.jpeg" alt="Image 2" style="width: 250px; height: 250px;"></td>
+                <td style="padding: 10px; text-align: center;"><img src="pic3.jpeg" alt="Image 3" style="width: 250px; height: 250px;"></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; text-align: center; font-size: 20px;">One Month Trial</td>
+                <td style="padding: 10px; text-align: center; font-size: 20px;">Six Months Trial</td>
+                <td style="padding: 10px; text-align: center; font-size: 20px;">One Year Trial</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; text-align: center; font-size: 20px;">$5.99</td>
+                <td style="padding: 10px; text-align: center; font-size: 20px;">$29.99</td>
+                <td style="padding: 10px; text-align: center; font-size: 20px;">$59.99</td>
+            </tr>
+        </table>
+
+        <h1 style = 
+        "text-align: center; 
+        font-size: 100px; color: rgb(127, 0, 0);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">Appointments</h1>
+
+        <p style = "font-family: Arial, sans-serif;
+        padding: 20px; color: rgb(78, 78, 78); background-color: rgb(243, 243, 243);">
+        Fill the patient form below to book your appointment!
+        </p>
+
+
+        <form method = "get" action = "https://httpbin.org/get" style = "font-size: 20px; background-color: rgb(252, 250, 244); border-collapse: collapse;">
+
+            <h2 style = "background-color: rgba(168, 231, 213, 0.542); text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 10px; color: rgb(0, 0, 0)">Appointment Booking</h2>
+
+            <label style="margin-top: 50px;margin-left: 10px;"> Enter your full name: <input type = "text" name = "name" /></label>
+            <br/>
+
+            <div style="margin-top: 20px;margin-left: 10px;">
+            Choose your gender:
+            <label><input type="radio" name="gender" value="male"/> Male </label>
+            <label><input type="radio" name="gender" value="female"/> Female </label>
+            </div>
+            <br/>
+
+            <label style="margin-top: 20px; margin-left: 10px;"> Enter your age: <input type = "text" name = "age" /></label>
+            <br/>
+            
+            <p style = "margin-left: 10px;">
+                Which governorate do you live in?
+                <select name = "governorate" size=“1">
+                <option> Muscat </option>
+                <option> North Batinah </option>
+                <option> South Batinah </option>
+                <option> Dakhiliyah </option>
+                <option> Wusta</option>
+                <option> Dhahirah</option>
+                <option> Buraimi</option>
+                <option> North Shariyah </option>
+                <option> South Sharqiyah</option>
+                <option> Musandam</option>
+                <option> Dhofar</option>
+                </select>
+            </p>
+            <br/>
+
+            <p style = "margin-left: 10px;">
+                What is your reason for booking this appointment?<br/>
+                <textarea name = "reason" rows = "3” cols = "40">
+                </textarea>
+            </p>
+
+            <p style = "margin-left: 10px;">
+                What date would you like the appointment to be on?
+                <select name = "month" size=“1">
+                    <option>January</option>
+                    <option>Febraury</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+                <select name = "day" size=“1">
+                    <option>1-8</option>
+                    <option>9-16</option>
+                    <option>17-24</option>
+                    <option>25-31</option>
+                </select>
+            </p>
+
+            <br/>
+
+            <div style="margin-top: 20px;margin-left: 10px;">
+                Would you prefer an online consultation?
+                <label><input type="radio" name="choice" value="Yes"/> Yes </label>
+                <label><input type="radio" name="choice" value="No"/> No </label>
+                <label><input type="radio" name="choice" value="Undecided"/> Undecided </label>
+                </div>
+
+            <br/>
+
+            <p style="margin-top: 20px;margin-left: 10px;">
+            <label> Enter your email: <input type = "text" name = "email" /></label>
+            </p>
+
+            <br/>
+
+            <p style="margin-top: 5px;margin-left: 10px;">
+            <label> Enter your phone number: <input type = "text" name = "number" /></label>
+            </p>
+            <br/>
+
+            <input type = "submit" value = "Submit Form"/>
+            <input type = "reset" value = "Reset Form" />
+            
+        </form>
+
+        <p style = "font-family: Arial, sans-serif;
+        padding: 20px; color: rgb(78, 78, 78); background-color: rgb(243, 243, 243);">
+        Fill the patient form below to cancel your appointment.
+        </p>
+
+        <form method = "get" action = "https://httpbin.org/get" style = "font-size: 20px; background-color: rgb(252, 250, 244); border-collapse: collapse;">
+
+            <h2 style = "background-color: rgba(168, 231, 213, 0.542); text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 10px; color: rgb(0, 0, 0)">Appointment Cancellation</h2>
+
+        <p style="margin-top: 20px;margin-left: 10px;">
+            <label> Enter your email: <input type = "text" name = "email" /></label>
+        </p>
+
+        <br/>
+
+        <p style="margin-top: 5px;margin-left: 10px;">
+        <label> Enter your phone number: <input type = "text" name = "number" /></label>
+        </p>
+        <br/>
+
+        <input type = "submit" value = "Submit Form"/>
+        <input type = "reset" value = "Reset Form" />
+    
+    </form>
+
+        <footer class="footer">
+
+            <div class="container">
+    
+                <div class="row">
+                
+                    <div class="col-md-4">
+                        <h4>Atlas of Wellness</h4>
+                        <p class="bg-gray">Your Guide to Optimal Health and Well-Being</p>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <h4>Visit our accounts</h4>
+    
+                        <div class="row">
+                            
+                                <div class="col-md-1"><a href="https://www.instagram.com/atlas.of.wellness?igsh=MXE1aTU2YjVydDRmZQ%3D%3D&utm_source=qr"><img src="instagram.png" alt="instagram-account" class="link" ></a></div>
+                                
+                                <div class="col-md-1"><a href="https://x.com/atlas4wellness1?s=11&t=5HIUu_K_Gy2fLhE3-DT_ow"><img src="twitter.png" alt="twitter-account" class="link" ></a></div>
+                                
+                                <div class="col-md-1"><a href="https://www.facebook.com/profile.php?id=61557521196539"><img src="facebook.png" alt="facebook-account" class="link"></a></div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h4>Reach Our Support Team</h4>
+                        <p> <a href="mailto:Atlas4wellness@gmail.com">Atlas4wellness@gmail.com</a></p>
+                    </div>
+            
+            </div>
+    
+        </footer>
+
+    </body>
+</html>

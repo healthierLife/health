@@ -1,0 +1,300 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style_sheet.css">
+        <title>Mental Health</title>
+
+        <style>
+            table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+            th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+
+            h2 {
+                background-color: rgba(168, 231, 213, 0.542); 
+                text-align: center; 
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                padding: 10px; color: rgb(0, 0, 0)
+            }
+        </style>
+
+<script>
+    // Define object type for prevalent mental health conditions
+    function MentalHealthCondition(name, description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    // Define object type for factors affecting mental health
+    function MentalHealthFactor(name, description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    // Define object type for mitigation strategies
+    function MitigationStrategy(name, description) {
+            this.name = name;
+            this.description = description;
+        }
+
+    // Make and initialize arrays to store information
+    var mentalHealthConditions = [
+        new MentalHealthCondition("Anxiety Disorders", "Anxiety disorders, including generalized anxiety disorder (GAD), social anxiety disorder, panic disorder, and phobias."),
+        new MentalHealthCondition("Depression", "Persistent feelings of sadness, hopelessness, and loss of interest or pleasure in activities."),
+        new MentalHealthCondition("Stress-Related Disorders", "Chronic stress leading to burnout, post-traumatic stress disorder (PTSD), and adjustment disorders."),
+        new MentalHealthCondition("ADHD", "Difficulties with attention, hyperactivity, and impulsivity."),
+        new MentalHealthCondition("Eating Disorders", "Anorexia nervosa, bulimia nervosa, and binge eating disorder."),
+        new MentalHealthCondition("Sleep Disorders", "Insomnia, sleep apnea, and restless legs syndrome.")
+    ];
+
+    var mentalHealthFactors = [
+        new MentalHealthFactor("Increased Stress", "Fast-paced life, high levels of work, academic, and social stress."),
+        new MentalHealthFactor("Societal Pressures", "Expectations related to success, appearance, and achievement."),
+        new MentalHealthFactor("Technological Advancements", "Excessive use of digital devices, social media, and online platforms."),
+        new MentalHealthFactor("Lifestyle Changes", "Diet, exercise habits, sleep patterns, and work-life balance."),
+        new MentalHealthFactor("Economic Instability", "Unemployment, financial stress, and socioeconomic disparities."),
+        new MentalHealthFactor("Cultural Influences", "Stigma, discrimination, and lack of awareness surrounding mental health.")
+    ];
+
+    var mitigationStrategies = [
+            new MitigationStrategy("Seek Professional Help", "Consult with a mental health professional such as a therapist, counselor, or psychiatrist to receive appropriate diagnosis, treatment, and support."),
+            new MitigationStrategy("Medication", "Follow prescribed medication regimens as directed by a healthcare provider to manage symptoms of mental health conditions such as depression, anxiety, and bipolar disorder."),
+            new MitigationStrategy("Therapy", "Engage in various forms of therapy, including cognitive-behavioral therapy (CBT), dialectical behavior therapy (DBT), and interpersonal therapy (IPT), to develop coping skills, improve self-awareness, and address underlying issues contributing to mental health conditions."),
+            new MitigationStrategy("Support Groups", "Participate in support groups or peer-led communities to connect with others who share similar experiences, receive encouragement, and learn from each other's coping strategies."),
+            new MitigationStrategy("Lifestyle Changes", "Adopt healthy lifestyle habits such as regular exercise, balanced nutrition, adequate sleep, stress management techniques, and mindfulness practices to promote overall well-being and alleviate symptoms of mental health conditions."),
+            new MitigationStrategy("Self-Care", "Prioritize self-care activities that promote relaxation, enjoyment, and self-compassion, such as hobbies, creative outlets, leisure activities, and spending time in nature.")
+        ];
+
+    // Function to display mental health conditions in table
+    function displayMentalHealthConditions() {
+        var table = document.getElementById("mentalHealthConditions");
+        var tbody = table.getElementsByTagName("tbody")[0];
+
+        mentalHealthConditions.forEach(function(condition) {
+            var row = tbody.insertRow();
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.textContent = condition.name;
+            cell2.textContent = condition.description;
+        });
+    }
+
+    // Function to display factors affecting mental health in table
+    function displayMentalHealthFactors() {
+        var table = document.getElementById("mentalHealthFactors");
+        var tbody = table.getElementsByTagName("tbody")[0];
+
+        mentalHealthFactors.forEach(function(factor) {
+            var row = tbody.insertRow();
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.textContent = factor.name;
+            cell2.textContent = factor.description;
+        });
+    }
+
+    function displayMitigationStrategies() {
+    var table = document.getElementById("mitigationTable");
+    var tbody = table.getElementsByTagName("tbody")[0];
+
+    mitigationStrategies.forEach(function(strategy) {
+        var row = tbody.insertRow();
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.textContent = strategy.name;
+        cell2.textContent = strategy.description;
+    });
+}
+
+    // Function to search for a term in both tables
+    function search() {
+        var searchTerm = document.getElementById("searchTerm").value.toLowerCase();
+
+        // checks for either name or description
+        mentalHealthConditions.forEach(function(condition) {
+            if (condition.name.toLowerCase().includes(searchTerm) || condition.description.toLowerCase().includes(searchTerm)) {
+                alert("Found in Prevalent Mental Health Conditions: " + condition.name);
+                return;
+            }
+        });
+
+        mentalHealthFactors.forEach(function(factor) {
+            if (factor.name.toLowerCase().includes(searchTerm) || factor.description.toLowerCase().includes(searchTerm)) {
+                alert("Found in Factors Affecting Mental Health: " + factor.name);
+                return;
+            }
+        });
+
+        mitigationStrategies.forEach(function(strategy) {
+        if (strategy.name.toLowerCase().includes(searchTerm) || strategy.description.toLowerCase().includes(searchTerm)) {
+            alert("Found in Mitigation Strategies: " + strategy.name);
+            return;
+        }
+    });
+
+        
+
+    }
+
+</script>
+    </head>
+    <body>
+        <header>  
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    
+                <div class="container-fluid font1">
+    
+                    <a class="navbar-brand" href="index.html">
+                        <img src="withoutBg.png" alt="Logo" id="logo" class="d-inline-block align-text-top">
+                        <span>Atlas of Wellness</span>
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse justify-content-end " id="navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Food.html">Nutrition</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="Mental Health.html">Mental Health</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="exercise.html">Exercise</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="appointments.html">Appointments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="about us.html">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Calculation.html">Calculation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="funpage.html">Funpage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="questionnaire.html">Questionnaire</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            </header>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <h1 style = 
+        "text-align: center; 
+        font-size: 100px; color: rgb(127, 0, 0);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;">Mental Health</h1>
+        
+        <hr/>
+
+        <body>
+            <h2>Prevalent Mental Health Conditions</h2>
+    <table id="mentalHealthConditions">
+        <thead>
+            <tr>
+                <th>Mental Health Condition</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                displayMentalHealthConditions();
+            </script>
+        </tbody>
+    </table>
+
+
+
+    <h2>Factors Affecting Mental Health</h2>
+    <table id="mentalHealthFactors">
+        <thead>
+            <tr>
+                <th>Factor</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                displayMentalHealthFactors();
+            </script>
+        </tbody>
+    </table>
+
+    <h2>Ways to Mitigate the Effects of Mental Health Conditions</h2>
+    <table id="mitigationTable">
+        <thead>
+            <tr>
+                <th>Strategy</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                displayMitigationStrategies();
+            </script>
+        </tbody>
+    </table>
+
+    <h2>Search</h2>
+    <form>
+        <label for="searchTerm">Search:</label>
+        <input type="text" id="searchTerm" name="searchTerm">
+        <button type="button" onclick="search()">Search</button>
+    </form>
+        
+
+          <footer class="footer">
+
+            <div class="container">
+    
+                <div class="row">
+                
+                    <div class="col-md-4">
+                        <h4>Atlas of Wellness</h4>
+                        <p class="bg-gray">Your Guide to Optimal Health and Well-Being</p>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <h4>Visit our accounts</h4>
+    
+                        <div class="row">
+                            
+                                <div class="col-md-1"><a href="https://www.instagram.com/atlas.of.wellness?igsh=MXE1aTU2YjVydDRmZQ%3D%3D&utm_source=qr"><img src="instagram.png" alt="instagram-account" class="link" ></a></div>
+                                
+                                <div class="col-md-1"><a href="https://x.com/atlas4wellness1?s=11&t=5HIUu_K_Gy2fLhE3-DT_ow"><img src="twitter.png" alt="twitter-account" class="link" ></a></div>
+                                
+                                <div class="col-md-1"><a href="https://www.facebook.com/profile.php?id=61557521196539"><img src="facebook.png" alt="facebook-account" class="link"></a></div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h4>Reach Our Support Team</h4>
+                        <p> <a href="mailto:Atlas4wellness@gmail.com">Atlas4wellness@gmail.com</a></p>
+                    </div>
+            
+            </div>
+    
+        </footer>
+    </body>
+</html>
