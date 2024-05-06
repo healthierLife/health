@@ -56,6 +56,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="questionnaire.html">Questionnaire</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="user.php">User Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="appointment .php">Appointment Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="subscription.php">Subscription Management</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -103,7 +112,7 @@
         </p>
 
 
-        <form method = "get" action = "https://httpbin.org/get" style = "font-size: 20px; background-color: rgb(252, 250, 244); border-collapse: collapse;">
+        <form method = "get" action = "appointmentsForm.php" style = "font-size: 20px; background-color: rgb(252, 250, 244); border-collapse: collapse;">
 
             <h2 style = "background-color: rgba(168, 231, 213, 0.542); text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             padding: 10px; color: rgb(0, 0, 0)">Appointment Booking</h2>
@@ -123,7 +132,7 @@
             
             <p style = "margin-left: 10px;">
                 Which governorate do you live in?
-                <select name = "governorate" size=“1">
+                <select name = "governorate" size="1">
                 <option> Muscat </option>
                 <option> North Batinah </option>
                 <option> South Batinah </option>
@@ -141,13 +150,13 @@
 
             <p style = "margin-left: 10px;">
                 What is your reason for booking this appointment?<br/>
-                <textarea name = "reason" rows = "3” cols = "40">
+                <textarea name = "reason" rows = "3" cols = "40">
                 </textarea>
             </p>
 
             <p style = "margin-left: 10px;">
                 What date would you like the appointment to be on?
-                <select name = "month" size=“1">
+                <select name = "month" size="1">
                     <option>January</option>
                     <option>Febraury</option>
                     <option>March</option>
@@ -161,7 +170,7 @@
                     <option>November</option>
                     <option>December</option>
                 </select>
-                <select name = "day" size=“1">
+                <select name = "day" size="1">
                     <option>1-8</option>
                     <option>9-16</option>
                     <option>17-24</option>
@@ -201,7 +210,7 @@
         Fill the patient form below to cancel your appointment.
         </p>
 
-        <form method = "get" action = "https://httpbin.org/get" style = "font-size: 20px; background-color: rgb(252, 250, 244); border-collapse: collapse;">
+        <form method = "get" action = "appointmentsForm2.php" style = "font-size: 20px; background-color: rgb(252, 250, 244); border-collapse: collapse;">
 
             <h2 style = "background-color: rgba(168, 231, 213, 0.542); text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             padding: 10px; color: rgb(0, 0, 0)">Appointment Cancellation</h2>
