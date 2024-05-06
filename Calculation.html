@@ -203,6 +203,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="questionnaire.html">Questionnaire</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="user.php">User Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="appointment .php">Appointment Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="subscription.php">Subscription Management</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -222,10 +231,10 @@
                    for your needs while staying within your budget!
             </p>
 
-            <form id="subscriptionForm">
+            <form method="get" action="CalculationForm.php" id="subscriptionForm" >
                 <h2>Bill Calculator</h2>
                 <label for="subscriptionType">Choose Subscription Type:</label>
-                <select id="subscriptionType">
+                <select id="subscriptionType" name="subscriptionType">
                     <option value="1">1 Month ($5.99)</option>
                     <option value="6">6 Months ($29.99)</option>
                     <option value="12">1 Year ($59.99)</option>
@@ -234,30 +243,30 @@
                 <input type="number" id="age" name="age"><br><br>
                 <label for="isStudent">Are you a student?</label>
                 <input type="checkbox" id="isStudent" name="isStudent"><br><br>
-                <button type="button" onclick="calculateSubscriptionBill()">Calculate Subscription Bill</button><br><br>
+                <button type="submit">Calculate Subscription Bill</button><br><br>
             </form>
 
             <hr/>
         
-            <form id="healthForm">
+            <form method="get" action="CalculationForm2.php" id="healthForm">
                 <h2>Health & Fitness Plan</h2>
                 <label for="height">Height (cm):</label>
                 <input type="number" id="height" name="height"><br><br>
                 <label for="weight">Weight (kg):</label>
                 <input type="number" id="weight" name="weight"><br><br>
                 <label for="exercise">Choose Exercise Plan:</label>
-                <select id="exercise">
+                <select id="exercise" name="exercise">
                     <option value="0">No Exercise Plan ($0.00)</option>
                     <option value="29.99">Basic Exercise Plan ($29.99)</option>
                     <option value="49.99">Advanced Exercise Plan ($49.99)</option>
                 </select><br><br>
                 <label for="diet">Choose Diet Plan:</label>
-                <select id="diet">
+                <select id="diet" name="diet">
                     <option value="0">No Diet Plan ($0.00)</option>
                     <option value="19.99">Basic Diet Plan ($19.99)</option>
                     <option value="39.99">Premium Diet Plan ($39.99)</option>
                 </select><br><br>
-                <button type="button" onclick="calculateHealthBill()">Calculate Health & Fitness Bill</button><br><br>
+                <button type="submit">Calculate Health & Fitness Bill</button><br><br>
             </form>
 
             <hr/>
